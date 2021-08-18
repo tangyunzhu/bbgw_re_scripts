@@ -1,0 +1,15 @@
+#!/bin/bash
+
+while [ 1 ];
+do
+        mount /dev/sda1 /media/
+        r=$?
+        if [ "$r" -eq 0 ]; then
+                rm -rf /media/*.file
+                dd if=/dev/zero of=/media/10M.file bs=1M count=50 && leds 3 on
+		umount /dev/sda1
+        fi
+        sleep 0.2
+        leds 3 off
+done
+
