@@ -1,4 +1,4 @@
-# BBGW-aging  
+# BBGW RE testing scripts    
 after cone this scripts, use the following command to enable services  
 ./install_emmc1.sh  
 ./install_eth0.sh  
